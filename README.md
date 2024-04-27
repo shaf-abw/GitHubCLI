@@ -24,7 +24,7 @@ Install Groovy on your system. You can download it here.
 
 **To create a pull request:**
 
-groovy github_cli.groovy create-pr <repoName> "PR Title" "PR Body" <username:headBranch> <baseBranch>
+groovy github_cli.groovy create-pr <repoName> "PR Title" "PR Body" <username:headBranch> baseBranch
 
 **Example:**
 
