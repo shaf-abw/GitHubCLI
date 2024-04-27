@@ -71,6 +71,19 @@ def mergePullRequest(String repoName, int pullRequestNumber) {
     println("Pull request merged successfully!")
 }
 
+/**
+ * Function to get issue.
+ */
+def getIssues(String repoName) {
+    def endpoint = "${repoName}/issues"
+    def headers = [
+        "Authorization": "Bearer ${getToken()}"
+    ]
+    
+    sendHttpRequest(endpoint, "GET", headers)
+    println("Get Issues Success")
+}
+
 // Main function to handle CLI commands
 def command = args[0]
 
@@ -81,6 +94,9 @@ try {
     } else if (command == "merge-pr") {
         // Example: groovy github_cli.groovy merge-pr repoName pullRequestNumber
         mergePullRequest(args[1], args[2].toInteger())
+    } else if (command == "issues") {
+        // Example: groovy github_cli.groovy issues repoName
+        getIssues(args[1])
     } else {
         println("Unknown command: $command")
         System.exit(1)
