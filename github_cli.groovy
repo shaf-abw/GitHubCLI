@@ -5,7 +5,7 @@ import java.net.URL
 
 // GitHub API Token
 String getToken() {
-    return "your_access_token_here"
+    return System.getenv('ACCESS_TOKEN')
 }
 
 /**
