@@ -14,9 +14,9 @@ Install Groovy on your system. You can download it here.
 
 **Installation**
 
-1) Clone this repository to your local machine: git clone https://github.com/your-username/github-cli.git
+1) Clone this repository to your local machine: git clone https://github.com/shaf-abw/GitHubCLI
 
-2) Navigate to the project directory: cd github-cli
+2) Navigate to the project directory: cd GitHubCLI
 
 **Usage**
 
@@ -24,21 +24,21 @@ Install Groovy on your system. You can download it here.
 
 **To create a pull request:**
 
-groovy github_cli.groovy create-pr <repoName> "PR Title" "PR Body" <username:headBranch> baseBranch
+groovy gitHubCli.groovy create-pr <repoName> "PR Title" "PR Body" <username:headBranch> baseBranch
 
 **Example:**
 
-groovy github_cli.groovy create-pr myrepo "New Feature" "This pull request adds a new feature" shaf:feature-branch main
+groovy gitHubCli.groovy create-pr myrepo "New Feature" "This pull request adds a new feature" shaf:feature-branch main
 
 **Merging a Pull Request**
 
 **To merge a pull request:**
 
-groovy github_cli.groovy merge-pr repoName pullRequestNumber
+groovy gitHubCli.groovy merge-pr repoName pullRequestNumber
 
 **Example:**
 
-groovy github_cli.groovy merge-pr myrepo 123
+groovy gitHubCli.groovy merge-pr myrepo 123
 
 **Commands**
   1) create-pr: Creates a pull request for the specified repository.
