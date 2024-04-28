@@ -82,15 +82,21 @@ def command = args[0]
 GitHubCli gitHubCli = new GitHubCli()
 
 try {
-    if (command == "create-pr") {
-        // Example: groovy gitHubCli.groovy create-pr repoName "PR Title" "PR Body" headBranch baseBranch
-        gitHubCli.createPullRequest(args[1], args[2], args[3], args[4], args[5])
-    } else if (command == "merge-pr") {
-        // Example: groovy gitHubCli.groovy merge-pr repoName pullRequestNumber
-        gitHubCli.mergePullRequest(args[1], args[2].toInteger())
-    } else {
-        println("Unknown command: $command")
-        System.exit(1)
+    switch (command) {
+        case "create-pr":
+            // Example: groovy gitHubCli.groovy create-pr repoName "PR Title" "PR Body" headBranch baseBranch
+            gitHubCli.createPullRequest(args[1], args[2], args[3], args[4], args[5])
+            break
+
+        case "merge-pr":
+            // Example: groovy gitHubCli.groovy merge-pr repoName pullRequestNumber
+            gitHubCli.mergePullRequest(args[1], args[2].toInteger())
+            break
+
+        default:
+            println("Unknown command: $command")
+            System.exit(1)
+            break
     }
 } catch (Exception ex) {
     println("Error: ${ex.message}")

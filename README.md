@@ -43,6 +43,32 @@ groovy gitHubCli.groovy merge-pr myrepo 123
 **Commands**
   1) create-pr: Creates a pull request for the specified repository.
   2) merge-pr: Merges a pull request by its number.
+
+**GitHub CLI Test Script**
+
+This script demonstrates testing of a GitHub Command Line Interface (CLI) tool using Groovy. The script simulates various CLI commands and tests their functionality against a GitHub API.
+
+**Overview**
+
+The GithubCliCliTest class contains test methods for executing different GitHub CLI commands and verifying their output. It uses Groovy for scripting and interacts with the system's command line interface to execute CLI commands.
+
+**Test Cases**
+
+1) testCliWithWrongCommand() : Tests the behavior of the CLI when an unknown command is provided.
+
+2) testCreatePullRequestCliWithWrongArgs() : Tests the creation of a pull request via CLI with incorrect arguments.
+
+3) testMergePullRequestCliWithWrongArgs() : Tests the merging of a pull request via CLI with incorrect arguments.
+
+4) testCreatePullRequestCli() : Tests the creation of a pull request via CLI with correct arguments.
+
+5) testMergePullRequestCli() : Tests the merging of a pull request via CLI with correct arguments.
+
+**Running the Tests**
+
+1) Run the test script using Groovy: groovy GithubCliCliTest.groovy
+
+2) View Test Results: After running the script, the test results will be displayed in the console. If all tests pass, you will see the message "All the test cases are passed".
   
 **Troubleshooting**
 
