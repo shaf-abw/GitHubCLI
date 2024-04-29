@@ -66,7 +66,7 @@ The GithubCliCliTest class contains test methods for executing different GitHub 
 
 **Running the Tests**
 
-1) Run the test script using Groovy: groovy GithubCliCliTest.groovy
+1) Run the test script using Groovy: groovy gitHubCliTest.groovy - test command
 
 2) View Test Results: After running the script, the test results will be displayed in the console. If all tests pass, you will see the message "All the test cases are passed".
   
